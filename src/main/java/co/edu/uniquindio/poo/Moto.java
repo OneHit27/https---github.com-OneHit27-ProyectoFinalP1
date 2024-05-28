@@ -1,8 +1,7 @@
 package co.edu.uniquindio.poo;
 
-public class Moto extends Vehiculo {
+public abstract class Moto extends Vehiculo {
     //Atributos propios de la clase vehiculo.
-    private final TipoMoto tipoMoto;
     private final int velocidadMax;
     
     /**
@@ -13,18 +12,9 @@ public class Moto extends Vehiculo {
      * @param tipoMoto
      * @param velocidadMax
      */
-    public Moto(String placa, String modelo, Propietario propietario, TipoMoto tipoMoto, int velocidadMax){
+    public Moto(String placa, String modelo, Propietario propietario, int velocidadMax){
         super(placa, modelo, propietario);
-        this.tipoMoto = tipoMoto;
         this.velocidadMax = velocidadMax;
-    }
-
-    /**
-     * Metodo para obtener el tipo de moto.
-     * @return tipo de moto (Clasica o hibrida).
-     */       
-    public TipoMoto getTipoMoto() {
-        return tipoMoto;
     }
     
     /**

@@ -4,9 +4,11 @@ import java.time.LocalDateTime;
 public class Registro {
 
     //Atributos necesarios para generar un registro de visita al parqueadero. 
-    private final Vehiculo vehiculo;
-    private final Puesto puesto;
-    private final LocalDateTime momentoIngreso;
+    private  Vehiculo vehiculo;
+    private  Puesto puesto;
+    private  LocalDateTime momentoIngreso;
+    private  LocalDateTime momentoSalida;
+
 
     /**
      * Constructor para crear instancia  la clase registro.
@@ -18,6 +20,7 @@ public class Registro {
         this.vehiculo = vehiculo;
         this.puesto = puesto;
         this.momentoIngreso = momentoIngreso;
+        this.momentoSalida = null;
     }
 
     /**
@@ -55,6 +58,23 @@ public class Registro {
                 ", puesto=(" + puesto.getI() + "," + puesto.getJ() + ")" +
                 ", momentoIngreso=" + momentoIngreso +
                 '}';
+    }
+
+
+    /**
+     * Metodo para obtener el momento de salida del vehiculo dentro del registro
+     * @return
+     */
+    public LocalDateTime getMomentoSalida() {
+        return momentoSalida;
+    }
+
+    /**
+     * Meoto para  modificar el momento de salida
+     * @param momentoSalida
+     */
+    public void registrarSalida(LocalDateTime momentoSalida) {
+        this.momentoSalida = momentoSalida;
     }
 
 }
